@@ -1,4 +1,4 @@
-# Moosic Playlists-An nsupervised-Machine-Learning-Case
+# Moosic Playlist: An UML case
 
 **Moosic Playlists** is an exploratory project designed to **learn and demonstrate the application of Unsupervised Machine Learning (UML)** techniques by generating   music playlists from Spotify audio data.
 
