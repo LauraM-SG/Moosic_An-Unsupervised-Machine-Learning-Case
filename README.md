@@ -21,7 +21,7 @@ Think of it as *machine-curated mood music* where the algorithm decides what bel
 ```
 Moosic_UML/
 │
-├── Data/         # Raw and preprocessed datasets (.csv, .xlsx, etc.)
+├── Data/         # Raw and preprocessed datasets (.csv)
 ├── Notebooks/    # Jupyter notebooks for exploration, preprocessing, and modeling
 ├── README.md     # Project documentation
 └── .gitignore    # Files and folders ignored by Git
