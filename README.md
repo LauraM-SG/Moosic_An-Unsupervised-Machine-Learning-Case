@@ -8,11 +8,11 @@ What if playlists could organize themselves—without genres, user input, or hum
 
 By analyzing attributes such as energy, danceability, tempo, and mood, the algorithm creates vibe-based playlists rooted in the raw sound of the music.
 
-### Highlights
+### Main Points
 
-- **Learning-first**: A practical application of unsupervised techniques using real music data.
-- **Vibe over genres**: Let the data guide the flow—no labels or pre-defined categories.
-- **No manual tags**: Clusters form organically from the sonic "fingerprint" of each track.
+- **Focus on learning by doing**: A practical application of unsupervised techniques using real music data.
+- **Vibe over genres**: Let the data guide the flow, not labels or predefined categories.
+- **No manual labels**: Clusters form naturally based on each track’s unique sound.
 
 Think of it as *machine-curated mood music* where the algorithm decides what belongs together, based only on how it sounds.
 
@@ -33,32 +33,39 @@ Moosic_UML/
 ## Workflow
 
 1. Load and clean Spotify audio data  
-2. Apply unsupervised learning (K-Means clustering)  
-3. Visualize and interpret the resulting clusters  
-4. Generate playlist-like groups based on similarity  
+2. Scale numerical features for clustering  
+3. Apply **K-Means clustering** (feel free to experiment with others like DBSCAN!)  
+4. Visualize and interpret the resulting clusters  
+5. Generate playlist-like song groups based on audio similarity  
 
 ---
 
 ## Technologies Used
 
-- Python 3  
-- Jupyter Notebooks / Google Colab  
-- Pandas, NumPy, Scikit-learn  
-- Matplotlib / Seaborn  
+- **Python 3**  
+- **Jupyter Notebooks / Google Colab** – same code, two platforms, choose what works best for you  
+- **Pandas**, **NumPy**, **Scikit-learn** – for data manipulation and machine learning  
+- **Matplotlib**, **Seaborn** – for visualizing patterns in the data    
 
 ---
 
 ## Dataset
 
-Located in the **`Data/`** folder, the dataset includes audio features and metadata for a selection of Spotify tracks:
+You’ll find the dataset in the **`Data/`** folder. The dataset includes audio features and metadata for a curated selection of Spotify tracks.
 
-- Danceability  
-- Energy  
-- Tempo  
-- Acousticness  
-- Genre (optional metadata)  
-- Artist / Track name  
-
+- **Acousticness:** Confidence score (0.0 to 1.0) indicating whether the track is acoustic. A value of 1.0 represents high certainty.
+- **Danceability:** Suitability for dancing, based on tempo and rhythm; 0.0 = least, 1.0 = most.
+- **Duration (ms):** Track length in milliseconds.
+- **Energy:** Perceived intensity/activity; 0.0 (calm) to 1.0 (energetic).
+- **Instrumentalness:** Likelihood the track has no vocals; closer to 1.0 means more instrumental.
+- **Key:** Musical key using Pitch Class notation (e.g., 0 = C, 1 = C♯/D♭, 2 = D, etc.).
+- **Liveness:** Probability of a live audience; values > 0.8 suggest live performance.
+- **Loudness:** Average loudness in decibels (dB).
+- **Mode:** Indicates the modality of the track: 1 = major, 0 = minor.
+- **Speechiness:** Detects spoken word content. Values closer to 1.0 indicate speech-heavy recordings (e.g., podcasts, rap).
+- **Tempo:** Estimated speed of the track in beats per minute (BPM).
+- **Time Signature:**  Beats per measure (e.g., 4 = common time)
+- **Valence:** Musical positiveness; closer to 1.0 = happier mood.
 ---
 
 ## How to Run
